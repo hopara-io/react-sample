@@ -4,7 +4,7 @@ import { ConfigKey, Config } from '../config/Config'
 const getClientCredentials = () => {
   const credentials = {
     clientId: Config.get(ConfigKey.clientId),
-    clientSecret: Config.get(ConfigKey.clientId),
+    clientSecret: Config.get(ConfigKey.clientSecret),
   }
 
   if (!credentials.clientId) {
