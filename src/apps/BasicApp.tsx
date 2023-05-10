@@ -10,6 +10,7 @@ import { Config, ConfigKey } from '../config/Config';
 const BasicApp = () => {
   const [accessToken, setAccessToken] = React.useState<string | null>(null)
   
+  // should be called in the backend in production
   React.useEffect(() => {
     (async () => {
       if (accessToken) return
@@ -18,8 +19,8 @@ const BasicApp = () => {
     })()
   }, [accessToken])
 
-  // change to your app name or set it in the .env file
-  const appName = Config.get(ConfigKey.appName) || 'sample'
+  // change to your app id or set it in the .env file
+  const appId = Config.get(ConfigKey.appId) || 'spaces'
   const assets = [...assetsData]
 
   // you may want to change the DataLoaders to your own API
@@ -42,7 +43,7 @@ const BasicApp = () => {
   return (
     <Template>
       <Hopara
-        app={appName}
+        app={appId}
         accessToken={accessToken}
         dataLoaders={dataLoaders}
         dataUpdaters={dataUpdaters}
