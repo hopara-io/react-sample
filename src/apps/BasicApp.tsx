@@ -19,20 +19,20 @@ const BasicApp = () => {
   }, [accessToken])
 
   // change to your app name or set it in the .env file
-  const appName = Config.get(ConfigKey.appName) || 'spaces'
+  const appName = Config.get(ConfigKey.appName) || 'sample'
   const assets = [...assetsData]
 
   // you may want to change the DataLoaders to your own API
   const dataLoaders: DataLoader[] = [{
-    name: 'sensors',
-    source: 'hopara',
+    name: 'assets_metrics',
+    source: 'duck',
     loader: async () => assets,
   }]
 
   // you may want to change the DataUpdaters to your own API
   const dataUpdaters: DataUpdater[] = [{
-    name: 'sensors',
-    source: 'hopara',
+    name: 'assets_metrics',
+    source: 'duck',
     updater: async (updatedRow: any) => {
       const rowIndex = assets.findIndex((row) => row.asset_id === updatedRow.asset_id)
       assets[rowIndex] = updatedRow
