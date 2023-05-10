@@ -2,7 +2,7 @@ import React from 'react';
 import { Template } from '../template/Template';
 import {Hopara} from '@hopara/react';
 import { AuthRepository } from '../auth/AuthRepository';
-import sensorData from '../data/sensors.json';
+import assetsData from '../data/assets.json';
 import { DataLoader } from '../hopara/DataLoader';
 import { DataUpdater } from '../hopara/DataUpdater';
 import { Config, ConfigKey } from '../config/Config';
@@ -20,13 +20,13 @@ const BasicApp = () => {
 
   // change to your app name or set it in the .env file
   const appName = Config.get(ConfigKey.appName) || 'spaces'
-  const sensors = [...sensorData]
+  const assets = [...assetsData]
 
   // you may want to change the DataLoaders to your own API
   const dataLoaders: DataLoader[] = [{
     name: 'sensors',
     source: 'hopara',
-    loader: async () => sensors,
+    loader: async () => assets,
   }]
 
   // you may want to change the DataUpdaters to your own API
@@ -34,8 +34,8 @@ const BasicApp = () => {
     name: 'sensors',
     source: 'hopara',
     updater: async (updatedRow: any) => {
-      const rowIndex = sensors.findIndex((row) => row.sensor_id === updatedRow.sensor_id)
-      sensors[rowIndex] = updatedRow
+      const rowIndex = assets.findIndex((row) => row.asset_id === updatedRow.asset_id)
+      assets[rowIndex] = updatedRow
     },
   }]
 
