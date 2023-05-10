@@ -3,10 +3,12 @@ import { Template } from '../template/Template';
 import {Hopara} from '@hopara/react';
 import { AuthRepository } from '../auth/AuthRepository';
 import sensorData from '../data/sensors.json';
+import { DataLoader } from '../hopara/DataLoader';
+import { DataUpdater } from '../hopara/DataUpdater';
+import { Config, ConfigKey } from '../config/Config';
 
 const BasicApp = () => {
   const [accessToken, setAccessToken] = React.useState<string | null>(null)
-  const sensors = [...sensorData]
   
   React.useEffect(() => {
     (async () => {
@@ -16,26 +18,34 @@ const BasicApp = () => {
     })()
   }, [accessToken])
 
+  // change to your app name or set it in the .env file
+  const appName = Config.get(ConfigKey.appName) || 'spaces'
+  const sensors = [...sensorData]
+
+  // you may want to change the DataLoaders to your own API
+  const dataLoaders: DataLoader[] = [{
+    name: 'sensors',
+    source: 'hopara',
+    loader: async () => sensors,
+  }]
+
+  // you may want to change the DataUpdaters to your own API
+  const dataUpdaters: DataUpdater[] = [{
+    name: 'sensors',
+    source: 'hopara',
+    updater: async (updatedRow: any) => {
+      const rowIndex = sensors.findIndex((row) => row.sensor_id === updatedRow.sensor_id)
+      sensors[rowIndex] = updatedRow
+    },
+  }]
+
   return (
     <Template>
       <Hopara
-        // change to your app name
-        app="spaces"
+        app={appName}
         accessToken={accessToken}
-        // you may want to change the DataLoaders and DataUpdaters to your own API
-        dataLoaders={[{
-          name: 'sensors',
-          source: 'hopara',
-          loader: () => sensors,
-        }]}
-        dataUpdaters={[{
-          name: 'sensors',
-          source: 'hopara',
-          updater: (updatedRow: any) => {
-            const rowIndex = sensors.findIndex((row) => row.sensor_id === updatedRow.sensor_id)
-            sensors[rowIndex] = updatedRow
-          },
-        }]}
+        dataLoaders={dataLoaders}
+        dataUpdaters={dataUpdaters}
       />
     </Template>
   )

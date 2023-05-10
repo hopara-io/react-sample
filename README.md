@@ -23,11 +23,30 @@ REACT_APP_CLIENT_ID="your-hopara-client-id"
 REACT_APP_CLIENT_SECRET="your-hopara-client-secret"
 ```
 
+#### Note:
+> For production environment we recommend to get the `access token` on the server side to keep your credetials safe.
+
 So you be able to start the app instance easily with the `start script`:
 
 ```shell
 $ npm start
 ```
 
-### Note:
-For production environment we recommend to get the `access token` on the server side to keep your credetials safe.
+## @hopara/react module
+You can customize the sample aplication setting the [@hopara/react](https://www.npmjs.com/package/@hopara/react) component props.
+
+```tsx
+<div className="HoparaEmbedded">
+  <Hopara
+    app="your-app-name"
+    accessToken="your-access-token"
+    dataLoaders={dataLoaders}
+    dataUpdaters={dataUpdaters}
+  />
+</div>
+```
+
+Our react component is available on [npm](https://www.npmjs.com/package/@hopara/react) and can be installed directly on your project.
+Go to our npm module [@hopara/react](https://www.npmjs.com/package/@hopara/react) to get more details.
+
+
