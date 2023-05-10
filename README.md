@@ -28,7 +28,7 @@ REACT_APP_CLIENT_ID="your-hopara-client-id"
 REACT_APP_CLIENT_SECRET="your-hopara-client-secret"
 ```
 
-> :warning: In production this call should take place safely on the back-end, this shared secret gives full control over your account.
+> :warning: In a production environment the access token request should take place on the back-end. This shared secret gives full control over your account.
 
 3- Now you're ready to start the application:
 
