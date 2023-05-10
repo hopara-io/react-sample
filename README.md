@@ -1,5 +1,5 @@
 # react-sample
-This repo demonstrates how to add Hopara visualizations to your react project. It's based on the
+This repo demonstrates how to add Hopara visualizations to your React project. It's based on the
  [**Hopara React**](https://www.npmjs.com/package/@hopara/react) module.
 
 ## Requirements
