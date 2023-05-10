@@ -1,0 +1,50 @@
+body {
+  background-color: #ddd;
+}
+
+.Content {
+  display: flex;
+  flex-direction: column;
+  padding: 12px;
+  grid-template-rows: min-content 1fr;
+  gap: 12px;
+  height: 100vh;
+  display: grid;
+}
+
+.Header {
+  background-color: #fff;
+  box-shadow: 0 1px 1px 0 #dedede, 0 4px 24px 0 RGB(34 41 47 / 10%);
+  padding: 12px;
+  display: flex;
+  align-items: center;
+}
+
+.Header h1 {
+  font-size: 20px;
+  font-weight: normal;
+  text-transform: capitalize;
+  color: #555;
+  line-height: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.View {
+  box-shadow: 0 1px 1px 0 #dedede, 0 4px 24px 0 RGB(34 41 47 / 10%);
+  height: 100%;
+  padding: 8px;
+  width: 100%;
+  box-sizing: border-box;
+  border-radius: 3px;
+}
+
+.View-Inner {
+  border: 1px solid #efefef;
+  border-radius: 3px;
+  height: 100%;
+  position: relative;
+  width: 100%;
+}
