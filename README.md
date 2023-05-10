@@ -23,8 +23,7 @@ REACT_APP_CLIENT_ID="your-hopara-client-id"
 REACT_APP_CLIENT_SECRET="your-hopara-client-secret"
 ```
 
-#### Note:
-> For production environment we recommend to get the `access token` on the server side to keep your credetials safe.
+> :warning: For production environment we recommend to get the `access token` on the server side to keep your credetials safe.
 
 So you be able to start the app instance easily with the `start script`:
 
