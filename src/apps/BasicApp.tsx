@@ -1,6 +1,6 @@
 import React from 'react';
 import { Template } from '../template/Template';
-import {Hopara} from '@hopara/react';
+import {Hopara, HoparaController} from '@hopara/react';
 import { AuthRepository } from '../auth/AuthRepository';
 import assetsData from '../data/assets.json';
 import { DataLoader } from '../hopara/DataLoader';
@@ -20,7 +20,7 @@ const BasicApp = () => {
   }, [accessToken])
 
   // change to your app id or set it in the .env file
-  const appId = Config.get(ConfigKey.appId) || 'spaces'
+  const appId = Config.get(ConfigKey.appId) || 'sample'
   const assets = [...assetsData]
 
   // you may want to change the DataLoaders to your own API
@@ -40,6 +40,12 @@ const BasicApp = () => {
     },
   }]
 
+  // we are using a custom controller to refresh the data every 5 seconds
+  const customController = new HoparaController()
+  setInterval(() => {
+    customController.refresh()
+  }, 5000)
+
   return (
     <Template>
       <Hopara
@@ -47,6 +53,7 @@ const BasicApp = () => {
         accessToken={accessToken}
         dataLoaders={dataLoaders}
         dataUpdaters={dataUpdaters}
+        controller={customController}
       />
     </Template>
   )
