@@ -1487,10 +1487,10 @@
     fast-deep-equal "^3.1.3"
     supercluster "^7.1.3"
 
-"@hopara/react@^0.3.1":
-  version "0.3.1"
-  resolved "https://registry.yarnpkg.com/@hopara/react/-/react-0.3.1.tgz#8c65889c203200c0be44f483f824b039cb1ced24"
-  integrity sha512-b7nNkK9eQA5BfZcnTuHiPzxVcBfeS95TtEmYtRuLQ53VMO3Ua8sMKDMlesuwEJ6Y+nANSFkH85hempeLOWN44A==
+"@hopara/react@^0.3.2":
+  version "0.3.2"
+  resolved "https://registry.yarnpkg.com/@hopara/react/-/react-0.3.2.tgz#1fad6f38f20349af4b2832b6d12f54b61c1e5e41"
+  integrity sha512-Ee1Bo8WlAL97VKffIfKh2ZsYCRPg8rL3eYKmaCxJd4ljNJ+DC1F6TaBkcyJmWUy/CiSnoUgvha+xeerMN+NKlA==
   dependencies:
     "@babel/core" "^7.18.9"
     "@deck.gl/aggregation-layers" "^8.9.7"
