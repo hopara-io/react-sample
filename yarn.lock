@@ -1227,10 +1227,10 @@
   resolved "https://registry.yarnpkg.com/@eslint/js/-/js-8.40.0.tgz#3ba73359e11f5a7bd3e407f70b3528abfae69cec"
   integrity sha512-ElyB54bJIhXQYVKjDSvCkPO1iU1tSAeVQJbllWJq1XQSmmA4dgFk8CbiBGpiOPxleE48vDogxCtmMYku4HSVLA==
 
-"@hopara/react@^0.3.8":
-  version "0.3.8"
-  resolved "https://registry.yarnpkg.com/@hopara/react/-/react-0.3.8.tgz#c1cb815fdf9abda1599eeab35113f1097499a291"
-  integrity sha512-MoiGynnku+Um68aSlZJz5LaAGgmo9Z1ottptzekHcdirA7DWMwuDgy25TNAYZNdW810sKeGiMpCqeyymGo96hA==
+"@hopara/react@^0.3.15":
+  version "0.3.15"
+  resolved "https://registry.yarnpkg.com/@hopara/react/-/react-0.3.15.tgz#b6378664ec56a3f7b3a770518171b331771649e8"
+  integrity sha512-8LoMiHTApx6uE6lhWCcZF+ngWBMDhGyu+VwSCNnqovQ0dINS0DzkqTl/NLHFryBAhobmPm63AtjlT80aHZrq0g==
 
 "@humanwhocodes/config-array@^0.11.8":
   version "0.11.8"
