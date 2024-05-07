@@ -19,12 +19,12 @@ const BasicApp = () => {
   }, [accessToken])
 
   // change to your app id or set it in the .env file
-  const appId = Config.get(ConfigKey.appId) || 'sample'
+  const visualizationId = Config.get(ConfigKey.visualizationId) || 'sample'
   const assets = [...assetsData]
 
   // you may want to change the DataLoaders to your own API
   const dataLoaders: DataLoader[] = [{
-    name: 'assets_metrics',
+    query: 'assets_metrics',
     source: 'files',
     loader: async () => assets,
   }]
@@ -32,7 +32,7 @@ const BasicApp = () => {
   return (
     <Template>
       <Hopara
-        app={appId}
+        visualization={visualizationId}
         accessToken={accessToken}
         dataLoaders={dataLoaders}
       />

@@ -1,6 +1,6 @@
 // 
 export enum ConfigKey {
-  appId = 'REACT_APP_APP_ID',
+  visualizationId = 'REACT_APP_VISUALIZATION_ID',
   clientId = 'REACT_APP_CLIENT_ID',
   clientSecret = 'REACT_APP_CLIENT_SECRET',
   clientEmail = 'REACT_APP_CLIENT_EMAIL',
