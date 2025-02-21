@@ -42,11 +42,9 @@ You can further customize the integration by changing the [@hopara/react](https:
 ```tsx
 <div className="HoparaEmbedded">
   <Hopara
-    app="your-app-name"
+    visualizationId="your-visualization-id"
     accessToken="your-access-token"
     dataLoaders={dataLoaders}
-    dataUpdaters={dataUpdaters}
-    controller={hoparaController}
   />
 </div>
 ```
