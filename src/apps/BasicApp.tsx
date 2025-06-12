@@ -32,7 +32,7 @@ const BasicApp = () => {
   return (
     <Template>
       <Hopara
-        visualization={visualizationId}
+        visualizationId={visualizationId}
         accessToken={accessToken}
         dataLoaders={dataLoaders}
       />
